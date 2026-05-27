@@ -1,11 +1,11 @@
 
 ---
 
-# 📄 2. `cpu.txt` (IMPORTANT)
+# 2. `cpu.txt` (IMPORTANT)
 
 This file is NOT static.
 
-### 👉 It should NOT contain fake values like “0%”
+###  It should NOT contain fake values like “0%”
 
 Instead:
 
