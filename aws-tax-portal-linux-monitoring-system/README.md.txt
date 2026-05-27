@@ -1,13 +1,13 @@
-# ☁ AWS Tax Portal System (Linux Monitoring Project)
+#  AWS Tax Portal System (Linux Monitoring Project)
 
-## 🧠 Project Overview
+## Project Overview
 This project simulates a **government-style tax portal system** hosted on AWS EC2 using Linux, NGINX, and real-time system monitoring.
 
 It started as a simple idea but evolved into a full cloud + Linux + DevOps-style project through real debugging and problem-solving.
 
 ---
 
-## 🚀 Final Architecture
+##  Final Architecture
 
 EC2 (Amazon Linux)
 ↓
@@ -21,7 +21,7 @@ Frontend Dashboard (HTML + JavaScript)
 
 ---
 
-## ⚠️ Challenges I Faced (Real Mistakes)
+##  Challenges I Faced (Real Mistakes)
 
 ### 1. Wrong Linux commands
 I initially used:
