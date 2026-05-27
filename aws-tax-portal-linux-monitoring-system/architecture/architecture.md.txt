@@ -1,0 +1,11 @@
+# AWS Tax Portal Architecture
+
+EC2 Instance (Amazon Linux)
+        ↓
+NGINX Web Server (Tax Portal UI)
+        ↓
+Bash CPU Monitoring Script
+        ↓
+cpu.txt (live system metric)
+        ↓
+Frontend Dashboard (HTML + JS)

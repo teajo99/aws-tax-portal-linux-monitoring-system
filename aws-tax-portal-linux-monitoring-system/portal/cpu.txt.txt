@@ -1,0 +1,14 @@
+
+---
+
+# 📄 2. `cpu.txt` (IMPORTANT)
+
+This file is NOT static.
+
+### 👉 It should NOT contain fake values like “0%”
+
+Instead:
+
+### Option A (BEST PRACTICE)
+Leave it empty initially:
+```text

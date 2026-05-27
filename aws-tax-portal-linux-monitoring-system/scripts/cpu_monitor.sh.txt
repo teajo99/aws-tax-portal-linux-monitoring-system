@@ -1,0 +1,8 @@
+#!/bin/bash
+
+while true
+do
+  CPU=$(top -bn1 | grep "Cpu(s)" | awk '{print $2 + $4}')
+  echo "$CPU%" > /usr/share/nginx/html/cpu.txt
+  sleep 2
+done
