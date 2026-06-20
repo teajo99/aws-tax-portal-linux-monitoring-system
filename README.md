@@ -7,8 +7,8 @@ User → NGINX (EC2) → Dashboard UI
               cpu.txt
                  ↓
            Linux EC2 System
-
-Architecture diagram of a cloud-based AWS EC2 Tax Portal monitoring system. The system uses an NGINX web server hosted on an Amazon Linux EC2 instance to serve a web dashboard. A Bash script runs on the Linux system to collect real-time CPU usage metrics, which are written to a file (cpu.txt). The frontend dashboard uses JavaScript to fetch and display live system performance data every 2 seconds. The system demonstrates Linux automation, server monitoring, and AWS EC2 deployment with security group configuration for HTTP access.
+           
+AWS EC2-based Tax Portal monitoring system where user requests are served through an NGINX web server. A Bash script collects real-time CPU metrics and writes them to a cpu.txt file, which is displayed on a simple HTML/JavaScript dashboard. The system runs on a Linux EC2 instance and demonstrates basic cloud monitoring and automatio
 
 ## AWS Tax Portal System – Cloud Monitoring & Infrastructure Observability
 # Overview
