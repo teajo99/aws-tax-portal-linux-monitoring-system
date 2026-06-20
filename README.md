@@ -1,129 +1,75 @@
-# AWS Tax Portal System (Linux Monitoring & Cloud Deployment)
+Architecture Diagram
+User → NGINX (EC2) → Dashboard UI
+                 ↓
+            Bash Script
+                 ↓
+              cpu.txt
+                 ↓
+           Linux EC2 System
 
-A cloud-based **Tax Portal simulation system** deployed on AWS EC2 using Linux, NGINX, and real-time system monitoring via Bash scripting.
+Architecture diagram of a cloud-based AWS EC2 Tax Portal monitoring system. The system uses an NGINX web server hosted on an Amazon Linux EC2 instance to serve a web dashboard. A Bash script runs on the Linux system to collect real-time CPU usage metrics, which are written to a file (cpu.txt). The frontend dashboard uses JavaScript to fetch and display live system performance data every 2 seconds. The system demonstrates Linux automation, server monitoring, and AWS EC2 deployment with security group configuration for HTTP access.
 
-This project demonstrates real-world cloud engineering concepts including infrastructure deployment, Linux administration, web server configuration, and system monitoring automation.
+## AWS Tax Portal System – Cloud Monitoring & Infrastructure Observability
+# Overview
 
----
+This project simulates a cloud-hosted tax portal system deployed on AWS EC2, designed to demonstrate real-time system monitoring, infrastructure automation, and web server configuration using Linux-based tooling.
 
-#  Live Architecture
+The system implements a lightweight observability layer that captures system performance metrics and serves them through a web-based dashboard.
 
+## Business Problem
 
-User Browser
-↓
-NGINX Web Server (EC2)
-↓
-Linux Bash Monitoring Script
-↓
-cpu.txt (Live System Metrics)
-↓
-Frontend Dashboard (HTML + JS)
+# Cloud-hosted systems require:
 
-
----
-
-# Live System Features
-
-- AWS EC2 hosted deployment
-- NGINX web server configuration
-- Real-time CPU monitoring
-- Bash automation scripts
-- Live dashboard UI updates (2-second refresh)
-- AWS Security Group configuration
-- Linux system troubleshooting & debugging
-
----
-
-# Tech Stack
-
-- AWS EC2 (Amazon Linux)
-- NGINX
-- Bash Scripting
-- HTML / CSS / JavaScript
-- Linux system tools (top, ps, systemctl)
-
----
-
-#  Real Challenges & Solutions
-
-## 1. Wrong Linux package manager
-**Issue:** Used `apt` instead of `yum`
-
-**Fix:** Learned Amazon Linux uses:
-```bash
-yum install
-2. NGINX service missing
-
-Issue: systemctl start nginx failed
-
-Fix: Installed NGINX using:
-
-sudo yum install nginx -y
-3. 404 error on cpu.txt
-
-Issue: File not found in browser
-
-Fix: Understood NGINX serves only:
-
-/usr/share/nginx/html/
-4. AWS browser timeout
-
-Issue: Website not accessible externally
-
-Fix: Configured AWS Security Group:
-
-HTTP port 80 opened to 0.0.0.0/0
-🧠 Key Learnings
-Linux system administration (Amazon Linux)
-AWS EC2 deployment and configuration
-NGINX web server setup
-Bash scripting for automation
 Real-time system monitoring
-AWS networking and security groups
-Debugging production-level infrastructure issues
- System Monitoring
+Infrastructure visibility
+Server health tracking
+Lightweight observability solutions
+Secure web access to system metrics
 
-# The system tracks:
+## This project simulates a basic production monitoring environment.
 
-CPU usage (real-time every 2 seconds)
-Web server status (NGINX health)
-System performance metrics
-
-Data is generated using a Bash script and served via NGINX.
-
-# How It Works
-Bash script collects CPU usage using Linux top
-Data is written to cpu.txt
-NGINX serves file to web browser
-JavaScript fetches updates every 2 seconds
-Dashboard displays live system performance
-
-# Screenshots
-AWS Infrastructure
-EC2 instance running
-Security group configuration (HTTP 80 open)
-Deployment
-NGINX active status
-Website live on public IP
-Monitoring
-Live CPU usage dashboard
-cpu.txt output in browser
-Terminal script running in background
-
-# Future Improvements
-Add RAM & Disk monitoring
-Convert script to Python API (Flask)
-Integrate AWS CloudWatch
-Add authentication system (login page)
-Deploy using Terraform (Infrastructure as Code)
-Author
-
-Temitope Ajo
-AWS | Linux | Automation | Infrastructure Monitoring
-
-📌 Project Purpose
-
-To simulate a real-world cloud-hosted tax portal system with integrated Linux monitoring, demonstrating practical DevOps and cloud engineering skills.
-
-
+AWS Architecture
+Amazon EC2 used as compute and hosting layer
+Amazon Linux used for system-level operations
+AWS Security Groups control HTTP access
+NGINX used as web server layer
+## System Architecture
+NGINX serves web dashboard and static files
+Bash script collects system metrics (CPU usage)
+Metrics are stored in cpu.txt
+JavaScript frontend polls data every 2 seconds
+EC2 provides full Linux system environment
+## Key Features
+Real-time CPU monitoring system
+Automated Bash-based data collection
+Web-based dashboard with live updates
+NGINX reverse web serving
+Linux system administration and configuration
+AWS EC2 deployment with security configuration
+## Technical Skills Demonstrated
+AWS EC2 provisioning and management
+Linux system administration (Amazon Linux)
+Bash scripting and automation
+NGINX web server configuration
+System monitoring and observability design
+AWS security group configuration
+Debugging infrastructure deployment issues
+## Challenges & Solutions
+Identified correct package manager (yum vs apt)
+Resolved NGINX installation and service startup issues
+Fixed file path errors in web server configuration
+Configured AWS security groups for HTTP access
+Debugged external access and browser connectivity issues
+## Architecture Decisions
+Bash scripting chosen for lightweight real-time monitoring
+NGINX used for efficient static file serving
+EC2 used for full system control and flexibility
+File-based metric storage used for simplicity and transparency
+JavaScript polling used for real-time UI updates
+## What This Project Demonstrates
+Real Linux system operations in cloud environment
+Infrastructure monitoring and observability design
+End-to-end EC2 deployment lifecycle
+Web server configuration and troubleshooting
+Practical DevOps-style thinking
 
