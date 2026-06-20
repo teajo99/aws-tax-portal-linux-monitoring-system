@@ -1,4 +1,5 @@
-Architecture Diagram
+## Architecture Diagram
+
 User → NGINX (EC2) → Dashboard UI
                  ↓
             Bash Script
